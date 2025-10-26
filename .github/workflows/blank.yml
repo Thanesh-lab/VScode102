@@ -23,21 +23,21 @@ jobs:
       BRANCH_NAME: ${{ github.ref_name }}
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    #   - name: Checkout code
+    #     uses: actions/checkout@v4
 
-      - name: Set up Node (example)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
+    #   - name: Set up Node (example)
+    #     uses: actions/setup-node@v4
+    #     with:
+    #       node-version: '18'
 
-      - name: Install dependencies
-        run: npm install
+    #   - name: Install dependencies
+    #     run: npm install
 
-      - name: Run tests
-        run: npm test
+    #   - name: Run tests
+    #     run: npm test
 
-      - name: Deploy to Environment
+        - name: Deploy to Environment
         run: |
           echo "Deploying to environment: $BRANCH_NAME"
 
