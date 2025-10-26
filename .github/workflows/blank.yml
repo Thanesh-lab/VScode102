@@ -1,12 +1,12 @@
 name: Environment Deploy Pipeline
 
 on:
-  push:
-    branches:
-      - dev
-      - qa
-      - stage
-      - prod
+  # push:
+  #   branches:
+  #     - dev
+  #     - qa
+  #     - stage
+  #     - prod
   workflow_dispatch:
     inputs:
       environment:
