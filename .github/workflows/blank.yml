@@ -38,22 +38,17 @@ jobs:
     #     run: npm test
 
         - name: Deploy to Environment
-        run: |
-          echo "Deploying to environment: $BRANCH_NAME"
+          run: |
+           echo "Deploying to environment: $BRANCH_NAME"
 
-          if [ "$BRANCH_NAME" == "dev" ]; then
+              if [ "$BRANCH_NAME" == "dev" ]; then
             echo "🚀 Deploying to DEV environment"
-            # Example: run terraform plan/apply or az cli commands
-            # terraform workspace select dev
-            # terraform apply -auto-approve
-          elif [ "$BRANCH_NAME" == "qa" ]; then
+             elif [ "$BRANCH_NAME" == "qa" ]; then
             echo "🚀 Deploying to QA environment"
-            # terraform workspace select qa
-            # terraform apply -auto-approve
-          elif [ "$BRANCH_NAME" == "stage" ]; then
+             elif [ "$BRANCH_NAME" == "stage" ]; then
             echo "🚀 Deploying to STAGE environment"
-          elif [ "$BRANCH_NAME" == "prod" ]; then
+             elif [ "$BRANCH_NAME" == "prod" ]; then
             echo "🚀 Deploying to PROD environment"
-          else
+           else
             echo "❌ Unknown branch. Skipping deployment."
-          fi
+           fi
