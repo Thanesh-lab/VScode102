@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - dev
-      - qa
-      - stage
-      - prod
+      # - qa
+      # - stage
+      # - prod
   # workflow_dispatch:
   #   inputs:
   #     environment:
