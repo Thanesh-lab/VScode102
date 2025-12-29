@@ -1,4 +1,4 @@
-name: Environment Deploy Pipeline 
+name: Environment Deploy Pipeline
 
 on:
   push:
