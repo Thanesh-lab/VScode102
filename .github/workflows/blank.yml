@@ -7,12 +7,12 @@ on:
       - qa
       - stage
       - prod
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: "Environment to deploy"
-        required: true
-        default: "dev" 
+  # workflow_dispatch:
+  #   inputs:
+  #     environment:
+  #       description: "Environment to deploy"
+  #       required: true
+  #       default: "dev" 
 
 jobs:
   deploy:
