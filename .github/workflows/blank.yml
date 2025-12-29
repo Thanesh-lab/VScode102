@@ -3,7 +3,7 @@ name: Environment Deploy Pipeline
 on:
   push:
     branches:
-      - dev
+      - master
       # - qa
       # - stage
       # - prod
