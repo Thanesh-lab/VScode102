@@ -1,7 +1,11 @@
 name: Email Notification
 
 on:
-  workflow_run
+  workflow_run:
+    workflows:
+      - CI Build
+    types:
+      - completed
 
 jobs:
   notify:
