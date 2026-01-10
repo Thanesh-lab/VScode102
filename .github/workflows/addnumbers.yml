@@ -1,9 +1,6 @@
 name:    Add 10 Numbers
-
 on:
-  
   push:
-    
 
 jobs:
   add-job:
