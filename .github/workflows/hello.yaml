@@ -1,20 +1,11 @@
-name: Hello World Workflow  
+name: Manual Workflow
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
-  hello-vedha:
+  run-manually:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Print Hello Message
-        run: echo "Hello, GitHub Actions! 👋"
-
-      - name: Print date and user
-        run: |
-          echo "Today is $(date)"
-          echo "Triggered by $GITHUB_ACTOR"
+      - name: Say hello
+        run: echo "Workflow triggered manually!"
