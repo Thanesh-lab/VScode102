@@ -1,17 +1,22 @@
-name:    Add 10 Numbers
 on:
-  push:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - qa
+          - prod
 
+      version:
+        description: 'Release version'
+        required: false
 jobs:
-  add-job:
+  run-manually:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Add 10 numbers
-        run: |
-          numbers=(1 2 3 4 5 6 7 8 9 10)
-          sum=0
-          for n in "${numbers[@]}"; do
-            sum=$((sum + n))
-          done
-          echo "The sum of 10 numbers is: $sum"
+      - name: Say hello
+        run: echo "Workflow triggered manually!"
